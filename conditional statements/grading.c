@@ -5,7 +5,7 @@ int main(){
     printf("Enter your marks in 5 subjects out of 100: ");
     scanf(" %f %f %f %f %f", &m1, &m2, &m3, &m4, &m5);
     float sum = m1+ m2+ m3+ m4+ m5;
-    float per = sum * 0.2;
+    float per = (sum/500)*100;
     if (per <= 100 && per > 90){
         printf("Grade: A1\n");
         printf("Grade point: 10\n");
