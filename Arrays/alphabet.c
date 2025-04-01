@@ -7,7 +7,6 @@ int main(){
     // Declare a pointer and assign it to the first element of the array
     char *ptr = alpha;
 
-
     // Storing uppercase letters (A-Z) in the array
     for(int i=0; i<26; i++){
         *(ptr + i) = 'A' + i;
