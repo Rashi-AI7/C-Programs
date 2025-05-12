@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-    int arr[10], n, temp;
+    int arr[10], n, curr, prev;
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
     printf("Enter the %d elements in the array: ", n);
@@ -9,16 +9,15 @@ int main(){
         scanf("%d", &arr[i]);
     }
 
-    //Bubble sort algorithm
-
-    for(int i=0; i<n-1; i++){
-        for(int j=0; j<n-i-1; j++){
-            if(arr[j] > arr[j+1]){
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
+    //Insertion sort algorithm
+    for(int i=1; i<n; i++){
+        curr = arr[i];
+        prev = i-1;
+        while(prev>=0 && arr[prev] > curr){
+            arr[prev+1] = arr[prev];
+            prev--;
         }
+        arr[prev+1] = curr;
     }
     printf("Sorted array: \n");
     for(int i=0; i<n; i++){
